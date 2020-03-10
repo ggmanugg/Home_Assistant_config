@@ -1,0 +1,82 @@
+title: Main control
+icon: fas:cog
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Heizung
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: thermostat
+          entity: climate.wohnzimmer
+        - type: thermostat
+          entity: climate.schlafzimmer
+           
+  - type: custom:vertical-stack-in-card
+    title: Jalousien
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ### Links
+          - type: horizontal-stack
+            cards:
+              - type: entity-button
+                entity: script.blinds_left_up
+                name: öffnen
+                tap_action:
+                  action: toggle
+              - type: entity-button
+                entity: script.blinds_left_down
+                name: schliessen
+                tap_action:
+                  action: toggle
+              - type: entity-button
+                entity: script.blinds_left_open
+                name: kippen
+                tap_action:
+                  action: toggle
+                  
+      - type: vertical-stack
+        cards:
+          - type: markdown
+            content: >
+              ### Rechts
+          - type: horizontal-stack
+            cards:          
+              - type: entity-button
+                entity: script.blinds_right_up
+                name: öffnen
+                tap_action:
+                  action: toggle
+              - type: entity-button
+                entity: script.blinds_right_down
+                name: schliessen
+                tap_action:
+                  action: toggle
+              - type: entity-button
+                entity: script.blinds_right_open
+                name: kippen
+                tap_action:
+                  action: toggle
+                  
+  - type: custom:vertical-stack-in-card
+    title: Strom
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities: 
+              - switch.mystrom_switch
+              - switch.mystrom_switch_2
+              - switch.mystrom_switch_3
+              
+  - type: custom:vertical-stack-in-card
+    title: Dienste
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities: 
+              - switch.pi_hole            
+            

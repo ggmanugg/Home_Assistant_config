@@ -1,0 +1,15 @@
+pi_hole_turn_on:
+  sequence:
+    - service: pi_hole.enable
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.pi_hole
+        
+pi_hole_turn_off:
+  sequence:
+    - service: pi_hole.disable
+      data:
+        duration: '00:00:00'
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.pi_hole

@@ -1,0 +1,51 @@
+title: Main view
+icon: fas:home
+
+badges:
+  - binary_sensor.updater
+  - entity: device_tracker.lya_l29
+    name: Manuels Handy
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:banner-card
+        heading:
+          - mdi:sofa
+          - Wohnzimmer
+        entities:
+          - entity: sensor.wohnzimmer_temperature
+            name: Heizung 
+          - entity: sensor.wohnzimmer_current_temperature
+            name: Temperatur
+          - entity: sensor.wohnzimmer_humidity
+            name: Luftfeuchtigkeit
+        
+      - type: custom:banner-card
+        heading:
+          - mdi:bed-empty
+          - Schlafzimmer
+        entities:
+          - entity: sensor.schlafzimmer_temperature
+            name: Heizung
+          - entity: sensor.schlafzimmer_current_temperature
+            name: Temperatur
+          - entity: sensor.schlafzimmer_humidity
+            name: Luftfeuchtigkeit
+            
+      - type: custom:banner-card
+        heading:
+          - mdi:window-shutter-alert
+          - Jalousien
+        row_size: 2
+        entities: 
+          - entity: input_select.blinds_left
+            name: Links 
+          - entity: input_select.blinds_right
+            name: Rechts
+        
+  - type: picture-glance
+    title: Kamera Haupteingang
+    entities: []
+    camera_image: camera.kamera_haupteingang
+    camera_view: camera.kamera_haupteingang

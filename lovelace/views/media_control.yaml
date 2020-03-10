@@ -1,0 +1,21 @@
+title: Media Control
+icon: mdi:speaker
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Chromecasts
+    cards:
+      - type: custom:mini-media-player
+        entity: media_player.shield
+        source: icon
+        artwork: cover
+      - type: custom:mini-media-player
+        entity: media_player.googlehome5424
+        source: icon
+        artwork: cover
+      - type: custom:mini-media-player
+        entity: media_player.google_mini
+        source: icon
+        artwork: cover
+
+  - type: custom:spotify-card
+    client_id: 409e7ce618f54f208c48d36668f4eb96

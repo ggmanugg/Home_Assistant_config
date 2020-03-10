@@ -1,0 +1,12 @@
+default_config:
+
+homeassistant:
+  
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - !secret trusted_network
+      allow_bypass_login: true
+
+  packages: !include_dir_named integrations

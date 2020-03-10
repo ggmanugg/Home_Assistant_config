@@ -1,0 +1,4 @@
+platform: swiss_hydrological_data
+station: 2457
+monitored_conditions:
+  - temperature

@@ -1,0 +1,119 @@
+title: Statistics
+icon: mdi:chart-bell-curve-cumulative
+cards:
+  - type: custom:vertical-stack-in-card
+    title: Coronavirus – COVID-19 - Schweiz
+    cards:
+      - type: glance
+        entities:
+          - entity: sensor.switzerland_coronavirus_confirmed
+            name: Bestätigt
+          - entity: sensor.switzerland_coronavirus_current
+            name: Aktuell
+          - entity: sensor.switzerland_coronavirus_recovered
+            name: Erholt
+          - entity: sensor.switzerland_coronavirus_deaths
+            name: Todesfälle
+      
+  - type: custom:vertical-stack-in-card
+    title: Aare Temperatur
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                name: Brienzwiler
+                entities:
+                  - sensor.aare_temperature
+                line_color: '#4481eb'
+                line_width: 8
+                font_size: 65
+                show:
+                  fill: false
+                hours_to_show: 12
+                hour24: true
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                name: Ringgenberg
+                entities:
+                  - sensor.aare_temperature_4
+                line_color: '#4481eb'
+                line_width: 8
+                font_size: 65
+                show:
+                  fill: false
+                hours_to_show: 12
+                hour24: true
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                name: Thun
+                entities:
+                  - sensor.aare_temperature_2
+                line_color: '#4481eb'
+                line_width: 8
+                font_size: 65
+                show:
+                  fill: false
+                hours_to_show: 12
+                hour24: true
+                
+  - type: custom:vertical-stack-in-card
+    title: Speedtest
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            name: Ping
+            entities:
+              - sensor.speedtest_ping
+            line_color: '#dd1923'
+            line_width: 8
+            font_size: 65
+            show:
+              fill: false
+            hours_to_show: 12
+            hour24: true
+          - type: custom:mini-graph-card
+            name: Down
+            entities:
+              - sensor.speedtest_download
+            line_color: '#dd1923'
+            line_width: 8
+            font_size: 65
+            show:
+              fill: false
+            hours_to_show: 12
+            hour24: true
+          - type: custom:mini-graph-card
+            name: Up
+            entities:
+              - sensor.speedtest_upload
+            line_color: '#dd1923'
+            line_width: 8
+            font_size: 65
+            show:
+              fill: false
+            hours_to_show: 12
+            hour24: true
+            
+  - type: custom:vertical-stack-in-card
+    title: Kryptowährungen
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                name: Bitcoin
+                entities:
+                  - sensor.exchange_rate_1_btc
+                line_color: '#ebc815'
+                line_width: 8
+                font_size: 65
+                show:
+                  fill: false
+                hours_to_show: 12
+                hour24: true

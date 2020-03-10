@@ -1,0 +1,9 @@
+sensor.schlafzimmer_temperature:
+  unit_of_measurement: °C
+sensor.schlafzimmer_current_temperature:
+  unit_of_measurement: °C
+  
+sensor.wohnzimmer_temperature:
+  unit_of_measurement: °C
+sensor.wohnzimmer_current_temperature:
+  unit_of_measurement: °C

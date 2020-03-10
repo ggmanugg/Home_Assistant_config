@@ -1,0 +1,6 @@
+camera:
+  - platform: generic
+    name: Kamera Haupteingang
+    still_image_url: !secret still_image_url
+    stream_source: !secret stream_source
+    verify_ssl: !secret verify_ssl

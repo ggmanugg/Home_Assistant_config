@@ -1,0 +1,176 @@
+# Blinds left down
+blinds_left_down:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: bitte warten..
+  
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2Off
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 30   
+        
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2On
+        delay_secs: 0.25
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: geschlossen        
+
+# Blinds left up
+blinds_left_up:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: bitte warten..
+        
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2On
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 30
+        
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2Off
+        delay_secs: 0.25        
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: geöffnet
+          
+# Blinds left open
+blinds_left_open:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: bitte warten..  
+  
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2On
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 0.75
+      
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A2Off
+        delay_secs: 0.25
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_left
+        option: gekippt
+        
+        
+# Blinds right down
+blinds_right_down:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: bitte warten..
+  
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A1Off
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 30
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: geschlossen        
+
+# Blinds right up
+blinds_right_up:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: bitte warten..
+        
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A1On
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 30       
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: geöffnet
+          
+# Blinds right open
+blinds_right_open:
+  sequence:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: bitte warten..  
+  
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A1On
+        delay_secs: 0.25
+        
+    - delay:
+        seconds: 0.75
+      
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 68145759
+        command:
+          - A1Off
+        delay_secs: 0.25
+        
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.blinds_right
+        option: gekippt        

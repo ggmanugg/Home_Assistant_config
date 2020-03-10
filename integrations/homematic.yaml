@@ -1,0 +1,13 @@
+homematic:
+  interfaces:
+    ip:
+      host: !secret homematic_host
+      port: !secret homematic_port
+      username: !secret homematic_username
+      password: !secret homematic_password
+      resolvenames: json
+  hosts:
+    ccu2:
+      host: !secret homematic_host
+      username: !secret homematic_username
+      password: !secret homematic_password

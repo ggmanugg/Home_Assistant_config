@@ -1,0 +1,4 @@
+geo_location:
+  - platform: geo_json_events
+    url: https://swisspost.opendatasoft.com/api/v2/catalog/datasets/zugangspunkte-post/exports/geojson
+    radius: 1

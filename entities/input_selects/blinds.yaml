@@ -1,0 +1,13 @@
+blinds_left:
+  options:
+    - geöffnet
+    - geschlossen
+    - gekippt
+    - bitte warten..
+    
+blinds_right:
+  options:
+    - geöffnet
+    - geschlossen
+    - gekippt
+    - bitte warten..

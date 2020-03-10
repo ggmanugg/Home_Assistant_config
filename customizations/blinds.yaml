@@ -1,0 +1,13 @@
+script.blinds_left_down:
+  icon: mdi:window-shutter
+script.blinds_left_up:
+  icon: mdi:window-shutter-open
+script.blinds_left_open:
+  icon: mdi:window-shutter-alert 
+  
+script.blinds_right_down:
+  icon: mdi:window-shutter
+script.blinds_right_up:
+  icon: mdi:window-shutter-open
+script.blinds_right_open:
+  icon: mdi:window-shutter-alert 

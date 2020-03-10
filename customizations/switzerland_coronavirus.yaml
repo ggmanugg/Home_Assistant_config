@@ -1,0 +1,15 @@
+sensor.switzerland_coronavirus_confirmed:
+  unit_of_measurement: Personen
+  icon: 'mdi:emoticon-neutral-outline'
+
+sensor.switzerland_coronavirus_current:
+  unit_of_measurement: Personen
+  icon: 'mdi:emoticon-frown-outline'
+
+sensor.switzerland_coronavirus_deaths:
+  unit_of_measurement: Personen
+  icon: 'mdi:emoticon-dead-outline'
+
+sensor.switzerland_coronavirus_recovered:
+  unit_of_measurement: Personen
+  icon: 'mdi:emoticon-happy-outline'

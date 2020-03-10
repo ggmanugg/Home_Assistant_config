@@ -1,0 +1,4 @@
+platform: bitcoin
+currency: CHF
+display_options:
+  - exchangerate

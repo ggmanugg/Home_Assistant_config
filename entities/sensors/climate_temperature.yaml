@@ -1,0 +1,11 @@
+platform: template
+sensors:
+  wohnzimmer_current_temperature:
+    value_template: "{{ state_attr('climate.wohnzimmer', 'current_temperature') }}"
+  schlafzimmer_current_temperature:
+    value_template: "{{ state_attr('climate.schlafzimmer', 'current_temperature') }}"
+
+  wohnzimmer_temperature:
+    value_template: "{{ state_attr('climate.wohnzimmer', 'temperature') }}"
+  schlafzimmer_temperature:
+    value_template: "{{ state_attr('climate.schlafzimmer', 'temperature') }}"

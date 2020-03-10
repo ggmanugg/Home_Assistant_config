@@ -1,0 +1,8 @@
+platform: mystrom
+host: !secret switch_mystrom_1 
+
+platform: mystrom
+host: !secret switch_mystrom_2
+
+platform: mystrom
+host: !secret switch_mystrom_3
